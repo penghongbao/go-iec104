@@ -7,7 +7,7 @@ package cs104
 import (
 	"fmt"
 
-	"github.com/themeyic/go-iec104/asdu"
+	"github.com/penghongbao/go-iec104/asdu"
 )
 
 const startFrame byte = 0x68 // 启动字符
