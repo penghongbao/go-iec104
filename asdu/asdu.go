@@ -329,3 +329,17 @@ func (sf *ASDU) fixInfoObjSize() error {
 
 	return nil
 }
+
+// 在 asdu/asdu.go 中，ASDU 结构体之后添加：
+func (sf *ASDU) SetInfoObj(data []byte) error {
+    lenDUI := sf.IdentifierSize()
+    if lenDUI+len(data) > ASDUSizeMax {
+        return fmt.Errorf("数据太长，超出 ASDU 最大长度")
+    }
+    // 将 data 拷贝到 bootstrap 数组中
+    copy(sf.bootstrap[lenDUI:], data)
+    // 更新 infoObj 字段，设置为 bootstrap[lenDUI:lenDUI+len(data)]
+    sf.infoObj = sf.bootstrap[lenDUI : lenDUI+len(data)]
+    return nil
+}
+
