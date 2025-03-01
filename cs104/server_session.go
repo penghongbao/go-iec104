@@ -13,8 +13,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/themeyic/go-iec104/asdu"
-	"github.com/themeyic/go-iec104/clog"
+	"github.com/penghongbao/go-iec104/asdu"
+	"github.com/penghongbao/go-iec104/clog"
 )
 
 const (
