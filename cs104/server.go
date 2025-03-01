@@ -11,8 +11,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/themeyic/go-iec104/asdu"
-	"github.com/themeyic/go-iec104/clog"
+	"github.com/penghongbao/go-iec104/asdu"
+	"github.com/penghongbao/go-iec104/clog"
 )
 
 // timeoutResolution is seconds according to companion standard 104,
